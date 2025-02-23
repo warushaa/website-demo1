@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Restaurant Menu Website</title>
+
+    <style>
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            padding: 10px;
+            background-color: #b3a24d;
+
+        }
+
+        .logo {
+            width: 400px;
+            border-radius: 50%;
+            height: 400px;
+            background-color: rgb(240, 247, 28);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 100px;
+            font-weight: bold;
+            color: black;
+            position: absolute;
+            left: 80px;
+            top: 20px;
+
+        }
+
+        h1 {
+            left: 50%;
+            margin-top: 120px;
+            margin-left: 2700px;
+            font-size: 180px;
+            font-weight: bold;
+            text-decoration: underline;
+            color: rgb(224, 234, 87);
+            font-family:Georgia, 'Times New Roman', Times, serif;
+        }
+
+        ul {
+            list-style-type: none;
+            margin-top: 90px;
+            padding: 0;
+            display: flex;
+            background-color: rgb(228, 228, 113);
+            gap: 1200px;
+            font-size: 50px;
+            margin-bottom: 30px;
+        }
+
+        li a {
+            color: black;
+            display: block;
+            text-align: center;
+            padding: 10px 10px;
+            text-decoration: none;
+        }
+
+        li img {
+            width: 150px;
+            height: 150px;
+        }
+
+        li a:hover:not(.active) {
+            background-color: #fff891;
+            border-radius: 10px;
+        }
+
+        .active {
+            background-color: white;
+        }
+
+        body {
+            background-image: url('background.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        .order-page {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: white;
+        }
+
+        .order-container {
+            background: rgb(175, 155, 8);
+            padding: 20px;
+            width: 2700px;
+            height: 1700px;
+            margin-bottom: 25px;
+            margin-left: 400px;
+
+        }
+
+        h2 {
+            padding-left: 70px;
+            font-size: 100px;
+        }
+
+        table {
+            width: 90%;
+            border-collapse: collapse;
+        }
+
+        td {
+            padding: 10px;
+            font-size: 70px;
+        }
+
+        tr {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        td img {
+            width: 650px;
+            height: 440px;
+            border-radius: 10px;
+            padding-left: 30px;
+        }
+
+        button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 60px;
+            padding-left: 170px;
+        }
+
+        .add-btn {
+            color: white;
+            font-weight: bold;
+        }
+
+        .reaction {
+            width: 110px;
+            height: 100px;
+            cursor: pointer;
+        }
+
+        .order-summary {
+            background-color: #fef165;
+            padding: 40px;
+            text-align: center;
+            width: 1600px;
+            height: 1650px;
+            margin-top: -1770px;
+            margin-left: 4200px;
+            color: black;
+        }
+
+        .bill-name {
+            margin-top: 100px;
+            padding-bottom: 50px;
+            border-bottom: 5px solid black;
+            font-size: 100px;
+            font-weight: bold;
+        }
+
+        .bill {
+            width: 100%;
+            margin-top: 50px;
+        }
+
+        .dish {
+            padding: 40px;
+            font-size: 70px;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .subtotal, .total {
+            border-top: 5px solid black;
+            padding-top: 70px;
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        .checkout {
+            width: 50%;
+            padding: 40px;
+            background-color: #fff;
+            font-size: 70px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-left: 120px;
+            margin-top: 50px;
+
+        }
+
+        .checkout:hover {
+            background-color: #d8d3d3;
+        }
+
+        footer {
+            background-color: #ddd66d;
+            color: black;
+            font-size: 40px;
+            font-weight: bold;
+            margin-top: 50px;
+        }
+
+        .footerContainer {
+            margin: 0 0 0 900px;
+            height: 430px;
+            display: flex;
+        }
+
+        .footerSection {
+            flex: auto;
+
+        }
+
+        .left {
+            text-align: left;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .right {
+            text-align: right;
+        }
+
+        .contactIcons img {
+            width: 90px;
+            height: 90px;
+        }
+
+        .contactIcons p {
+            margin: 0;
+            line-height: 0;
+        }
+
+        .socialIcons img {
+            width: 150px;
+            height: 150px;
+            margin: 0 20px;
+        }
+
+        .pp {
+            line-height: 1.2;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="logo">U & Me</div>
+
+    <h1>Order Now</h1>
+
+    <ul>
+        <li><a class="active" href="#home"><img src="home.jpg" alt="Home">Home</a></li>
+        <li><a href="#menu"><img src="menu.jpg" alt="Menu">Menu</a></li>
+        <li><a href="#explore"><img src="explore.jpg" alt="Explore">Explore</a></li>
+        <li><a href="#favourites"><img src="favourites.jpg" alt="Favourites">Favourites</a></li>
+        <li><a href="#profile"><img src="profile.jpg" alt="Profile">Profile</a></li>
+    </ul>
+
+    <div class="order-page">
+        
+            <div class="order-container">
+                <h2>Order Details</h2>
+                <table>
+                    <tr>
+                        <td rowspan="2"><img src="dumplings.jpg" alt="Soup Dumplings"></td>
+                        <td>Soup Dumplings</td>
+                        <td>$23.40</td>
+                    </tr>
+                    <tr>
+                        <td>1 <button class="add-btn">+ADD</button></td>
+                        <td>
+                            <img src="bin.jpg" alt="" class="reaction">
+                            <img src="fav.jpg" alt="" class="reaction">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2"><img src="pasta.jpg" alt="Creamy Pasta"></td>
+                        <td>Creamy Pasta</td>
+                        <td>$18.00</td>
+                    </tr>
+                    <tr>
+                        <td>1 <button class="add-btn">+ADD</button></td>
+                        <td>
+                            <img src="bin.jpg" alt="" class="reaction">
+                            <img src="fav.jpg" alt="" class="reaction">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2"><img src="salad.jpg" alt="Chicken Salad"></td>
+                        <td>Chicken Salad</td>
+                        <td>$07.90</td>
+                    </tr>
+                    <tr>
+                        <td>1 <button class="add-btn">+ADD</button></td>
+                        <td>
+                            <img src="bin.jpg" alt="" class="reaction">
+                            <img src="fav.jpg" alt="" class="reaction">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="order-summary">
+                <div class="bill-name">Order Summary</div>
+                <div class="bill">
+                    <div class="dish">
+                        <span>Soup Dumplings</span>
+                        <span>$ 23.40</span>
+                    </div>
+                    <div class="dish">
+                        <span>Creamy Pasta</span>
+                        <span>$ 18.00</span>
+                    </div>
+                    <div class="dish">
+                        <span>Chicken Salad</span>
+                        <span>$ 07.90</span>
+                    </div>
+                    <div class="dish subtotal">
+                        <span>Subtotal</span>
+                        <span>$ 49.30</span>
+                    </div>
+
+                    <div class="dish">
+                        <span>Delivery</span>
+                        <span>$ 03.50</span>
+                    </div>
+                    <div class="dish total">
+                        <span>Total</span>
+                        <span>$ 52.80</span>
+                    </div>
+
+                    <button class="checkout">Checkout</button>
+                </div>
+            </div>
+        
+
+
+        <footer class="footer">
+            <div class="footerContainer">
+                <div class="footerSection left">
+                    <h3>Reach us</h3>
+                    <div class="contactIcons">
+                        <p> <img src="call.jpg" alt="Call Icon">
+                            091223455 / 0916677899</p>
+                    </div>
+                    <div class="contactIcons">
+                        <p><img src="message.jpg" alt="Message Icon">
+                            077223445 / 0717678990</p>
+                    </div>
+                    <div class="contactIcons">
+                        <p><img src="mail.jpg" alt="Mail Icon">
+                            <a href="mailto:restaurantnearby@gmail.com">restaurantnearby@gmail.com</a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="footerSection center">
+                    <h3>Popular Pages</h3>
+                    <p class="pp">
+                        Home<br>
+                        About Us<br>
+                        Our Chefs<br>
+                        FAQs<br>
+                        Contact Us
+                    </p>
+                </div>
+
+                <div class="footerSection right">
+                    <h3>Connect with us</h3>
+                    <div class="socialIcons">
+                        <img src="facebook.jpg" alt="Facebook Icon">
+                        <img src="insta.jpg" alt="Instagram Icon">
+                        <img src="twitter.jpg" alt="Twitter Icon">
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+
+
+
+    </div>
+
+    </body>
+
+</html>
+
